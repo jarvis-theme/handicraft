@@ -60,7 +60,7 @@
 				<div class="address">
 		           <address>
 		              <!-- Company name -->
-		              <h6>{{$kontak->nama}}</h6>
+		              <strong>{{$kontak->nama}}</strong><br>
 		              <!-- Address -->
 		              {{$kontak->alamat}}<br />
 		              <!-- Phone number -->

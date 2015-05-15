@@ -1,18 +1,4 @@
-@if(Session::get('message'))
-<div class="success" id='message' style='display:none'>
-  <p>Terima kasih, testimonial anda sudah terkirim.</p>
-</div>
-@endif
-@if(Session::get('error'))
-<div class="error" id='message' style='display:none'>
-Terjadi kesalahan dalam menyimpan data.<br>
-    <ul>
-    @foreach($errors->all() as $message)
-        <li>{{ $message }}</li>
-    @endforeach
-    </ul>
-</div>
-@endif
+
 
 <section style="margin-bottom:40px">
 	<div class="row">
@@ -31,7 +17,7 @@ Terjadi kesalahan dalam menyimpan data.<br>
         @endforeach
         {{list_testimonial()->links()}}
         <div class="row section" style="margin-top: 40px;">
-            <div class="seven columns">
+            <div class="col-lg-12">
                 <div class="respond">
                     <form class="" action="{{url('testimoni')}}" method="post">
                         <h3>Kirim Testimonial</h3>

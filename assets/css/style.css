@@ -1745,7 +1745,7 @@ section .title span { font-weight: normal; color: #444; }
 section .checkout .field { margin-bottom: 20px; }
 section .picker.full { margin: 0; width: 100%; }
 section .section i { color: #724606; }
-section .section .meta { background: #eee; color: #444; }
+section .section .meta { background: #eee; color: #444; font-size: 11px; }
 section .section .meta i { color: #444; }
 section .section .meta a { color: #444; }
 section .section .meta a:hover { color: #000; }

@@ -24,7 +24,7 @@
 
 <section style="margin-bottom:40px">
     <div class="row">
-        <div class="six columns aside">
+        <div class="eight columns aside">
             <form action="{{url('konfirmasiorder')}}" method="post">
                 <div class="title">
                     <h4>Konfirmasi Order</h4>
@@ -49,7 +49,7 @@
             </form>
         </div>
 
-        <div class="six columns">
+        <div class="three columns">
             <div style="text-align: center">
                 @foreach(vertical_banner() as $banner)
                 {{HTML::image(banner_image_url($banner->gambar),'banner')}}

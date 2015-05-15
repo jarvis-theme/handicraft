@@ -1,1 +1,1 @@
-<i class="icon-basket"></i> <strong style="padding-right: 10px;">{{ price(Shpcart::cart()->total() )}}</strong>
+<i class="icon-basket"></i> <strong>{{ price(Shpcart::cart()->total() )}}</strong>

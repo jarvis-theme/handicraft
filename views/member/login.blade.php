@@ -26,18 +26,6 @@
 		<h3 class="title">Login to Access <span>Amazing Benefits !!!</span> </h3>
 	</div>
 	<div class="row section">
-		<div class="six columns">
-			<div class="title">
-				<h4>New Costumer</h4>
-			</div>
-			<p>
-				By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
-				<div class="medium metro rounded btn primary">
-					<a href="{{url('member/create')}}">Register</a>
-				</div>
-			</p>
-		</div>
-
 		<!-- login section -->
 		<div class="six columns">
 			<div class="respond">
@@ -64,5 +52,17 @@
 				</form>
 			</div>
 		</div>
+		<div class="six columns">
+			<div class="title">
+				<h4>New Costumer</h4>
+			</div>
+			<p>
+				By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+				<div class="medium metro rounded btn primary">
+					<a href="{{url('member/create')}}">Register</a>
+				</div>
+			</p>
+		</div>
+
 	</div>
 </section>

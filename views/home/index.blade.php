@@ -55,14 +55,14 @@
 				<!-- product detail -->
 				<div class="product-detail">
 					<h4 class="title"><a href="{{product_url($new_produk)}}">{{short_description($new_produk->nama, 18)}}</a></h4>
-					@if(is_terlaris($new_produk))
-					<span class="sale">HOT</span>
-					@endif
-					@if(is_produkbaru($new_produk))
-					<span class="sale">BARU</span>
-					@endif
 					@if(is_outstok($new_produk))
 					<span class="sale">KOSONG</span>
+					@else
+						@if(is_terlaris($new_produk))
+						<span class="sale">HOT</span>
+						@else(is_produkbaru($new_produk))
+						<span class="sale">BARU</span>
+						@endif
 					@endif
 					<span class="price">
 						@if(!empty($new_produk->hargaCoret))

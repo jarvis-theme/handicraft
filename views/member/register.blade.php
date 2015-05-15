@@ -21,19 +21,6 @@
 		<h3 class="title">Login to Access <span>Amazing Benefits !!!</span> </h3>
 	</div>
 	<div class="row">
-		<!-- register <section></section> -->
-		<div class="six columns">
-			<div class="title">
-				<h4>Have An Account</h4>
-			</div>
-			<p>
-				By login you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
-				<div class="medium metro rounded btn primary">
-					<a href="{{url('member')}}">Login</a>
-				</div>
-			</p>
-		</div>
-
 		<!-- login section -->
 		<div class="six columns aside">
 			<form action="{{url('member')}}" method="post">
@@ -46,7 +33,7 @@
 				      <label class="mheight" for="email"><strong>Nama</strong></label>
 				    </div>
 				    <div class="nine columns">
-				      <input class="text input" id="email" type="email" value="{{Input::old('nama')}}" name="nama" required />
+				      <input class="text input" id="text" type="text" value="{{Input::old('nama')}}" name="nama" required />
 				    </div>
 				</div>
 				<!-- email -->
@@ -152,8 +139,8 @@
 				    <div class="nine columns">
 				      <label class="checkbox checked" for="check1">
 					    <input name="readme" id="check1" value="1" type="checkbox" />
-					    <span></span> Saya telah membaca dan menyetujui <a href="{{url('service')}}" target="_blank">Syarat dan Ketentuan</a>
-					  </label>
+					    <span></span> Saya telah membaca dan menyetujui </label><a href="{{url('service')}}" target="_blank">Syarat dan Ketentuan</a>
+					  
 				    </div>
 				</div>
 				<div class="field row">
@@ -166,5 +153,19 @@
 				</div>
 			</form>
 		</div>
+		<!-- register <section></section> -->
+		<div class="six columns">
+			<div class="title">
+				<h4>Have An Account</h4>
+			</div>
+			<p>
+				By login you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+				<div class="medium metro rounded btn primary">
+					<a href="{{url('member')}}">Login</a>
+				</div>
+			</p>
+		</div>
+
+		
 	</div>
 </section>

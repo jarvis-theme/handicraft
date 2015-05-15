@@ -27,11 +27,9 @@
 						<h4 class="title"><a href="{{product_url($products)}}">{{short_description($products->nama,19)}}</a></h4>
 						@if(is_outstok($products))
 							<span class="empty">Kosong</span>
-                        @endif
-                        @if(is_terlaris($products))
+                        @elseif(is_terlaris($products))
 							<span class="sale">Hot</span>
-                        @endif
-                        @if(is_produkbaru($products))
+                        @elseif(is_produkbaru($products))
 							<span class="new">Baru</span>
                         @endif
 						<span class="price">

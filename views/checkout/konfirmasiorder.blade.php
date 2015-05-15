@@ -52,20 +52,20 @@
 						</td>
 						<td class="quantity">
 							@if($checkouttype==1)
-							{{jadiRupiah($order->total)}}
+							{{price($order->total)}}
 							
 							@else 
 								@if($order->status < 2)
-									{{jadiRupiah($order->total)}}
+									{{price($order->total)}}
 								@elseif(($order->status > 1 && $order->status < 4) || $order->status==7)
-									{{jadiRupiah($order->total - $order->dp)}}
+									{{price($order->total - $order->dp)}}
 								@else
 									0
 								@endif
 							@endif
 						</td>
 						<td class="quantity">
-							{{($order->status==2 || $order->status==3) ? jadiRupiah(0) : ' - '.jadiRupiah($order->total)}}
+							{{($order->status==2 || $order->status==3) ? price(0) : ' - '.price($order->total)}}
 						</td>
 						<td class="sub-price">
 							{{ $order->noResi}}
@@ -110,8 +110,9 @@
 		</div>
 
 		<div class="twelve columns section">
-			<div class="six columns respond">
 			@if($order->jenisPembayaran==1)
+			<div class="six columns respond">
+			
 				@if($checkouttype==1)                         
 				{{Form::open(array('url'=> 'konfirmasiorder/'.$order->id, 'method'=>'put'))}}                            
 				
@@ -154,8 +155,8 @@
                 </div>
 				<!-- <button type="submit" class="medium metro rounded btn primary">Konfirmasi Order</button> -->
 				{{Form::close()}}
-			@endif
 			</div>
+			@endif
 		</div>
 
 		@if($paymentinfo!=null)
@@ -191,7 +192,7 @@
 		@endif 
 	  
 		@if($order->jenisPembayaran==2)
-		  <h3><center>Konfirmasi Pemabayaran Via Paypal</center></h3><br>
+		  <h3><center>Konfirmasi Pembayaran Via Paypal</center></h3><br>
 		  <p>Silakan melakukan pembayaran dengan paypal Anda secara online via paypal payment gateway. Transaksi ini berlaku jika pembayaran dilakukan sebelum {{$expired}}. Klik tombol "Bayar Dengan Paypal" di bawah untuk melanjutkan proses pembayaran.</p>
 		  {{$paypalbutton}}
 		  <br>

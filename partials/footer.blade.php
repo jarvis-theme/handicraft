@@ -1,6 +1,6 @@
         <aside class="first">
             <div class="row">
-                <div class="four columns">
+                <div class="three columns">
                     <h4 class="title">{{short_description(Theme::place('title'),23)}}</h4>
                     <div class="social">
                         @if(!empty($kontak->fb))
@@ -24,7 +24,7 @@
                         </a>
                         @endif
                     </div>
-                    <p>{{short_description($aboutUs[1]->isi,230)}}</p>
+                    <p>{{--short_description($aboutUs[1]->isi,230)--}}</p>
                 </div>
                 <div class="five columns">
                     <h4>Subscribe</h4>
@@ -35,10 +35,10 @@
                                 <button type="submit" {{ @$mailing->action==''?'disabled style="cursor:default"':'' }}>Subscribe</button>
                             </div>
                         </div>
-                        <p>Get top trens and fresh editors picks in your inbox.</p>
+                        <p>Get special promo and product to your email.</p>
                     </form>
                 </div>
-                <div class="three columns">
+                <div class="four columns">
                     <h4>Get In Touch</h4>
                     <ul>
                         <li>
@@ -57,7 +57,13 @@
                             @endif
                         </li>
                         <li>
+                           <i class="icon-mobile"></i> {{$kontak->bb}} <small>(BBM)</small>
+                        </li>
+                        <li>
                            <i class="icon-mail"></i> {{$kontak->email}}
+                        </li>
+                        <li>
+                            <i class="icon-a"></i> {{ymyahoo($kontak->ym)}}
                         </li>
                     </ul>
                 </div>

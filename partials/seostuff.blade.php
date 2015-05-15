@@ -1,5 +1,5 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="{{!empty($description) ? $description : 'noindex, nofollow'}}">
+	<meta name="description" content="{{$description}}">
 	<meta name="keywords" content="{{$keywords}}">
 	<meta name="rating" content="general">
 	<meta name="author" content="jarvis-store">
@@ -12,12 +12,15 @@
 	<meta name="DC.Description" content="{{$description}}">
 	
 	<!-- Facebook Metadata /-->
+	<meta property="fb:page_id" content="" />
+	<meta property="og:image" content="" />
 	<meta property="og:description" content=""/>
 	<meta property="og:title" content=""/>
 
 	<!-- Google+ Metadata /-->
 	<meta itemprop="name" content="">
 	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
 
 	<link rel="canonical" href="{{URL::full()}}">
 	<link rel="handicraft-theme" href="{{dirTemaToko()}}handicraft/">
