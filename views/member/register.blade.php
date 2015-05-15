@@ -30,7 +30,7 @@
 				<!-- name -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="email"><strong>Nama</strong></label>
+				      <label class="mheight" for="nama"><strong>Nama</strong></label>
 				    </div>
 				    <div class="nine columns">
 				      <input class="text input" id="text" type="text" value="{{Input::old('nama')}}" name="nama" required />
@@ -66,40 +66,34 @@
 				<!-- negara -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="pass"><strong>Negara</strong></label>
+				      <label class="mheight" for="country"><strong>Negara</strong></label>
 				    </div>
 				    <div class="nine columns">
-				    	<div class="picker full">
-							{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old(''),array('required', 'id="negara" data-rel="chosen" class="form-control"'))}}
-						</div>
+						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old(''),array('required', 'id="negara" data-rel="chosen" class="twelve columns text input"'))}}
 				    </div>
 				</div>
 				<!-- provinsi -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="pass"><strong>Provinsi</strong></label>
+				      <label class="mheight"><strong>Provinsi</strong></label>
 				    </div>
 				    <div class="nine columns">
-				    	<div class="picker full">
-							{{Form::select('provinsi',array('' => '-- Pilih Provinsi --'), Input::old("provinsi"),array('required', 'id="provinsi" data-rel="chosen" class="form-control"'))}}
-						</div>
+						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --'), Input::old("provinsi"),array('required', 'id="provinsi" data-rel="chosen" class="twelve columns text input"'))}}
 				    </div>
 				</div>
 				<!-- kota -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="pass"><strong>Kota</strong></label>
+				      <label class="mheight"><strong>Kota</strong></label>
 				    </div>
 				    <div class="nine columns">
-				    	<div class="picker full">
-							{{Form::select('kota',array('' => '-- Pilih Kota --'), Input::old("kota"),array('required', 'id="kota" data-rel="chosen" class="form-control"'))}}
-						</div>
+						{{Form::select('kota',array('' => '-- Pilih Kota --'), Input::old("kota"),array('required', 'id="kota" data-rel="chosen" class="twelve columns text input"'))}}
 				    </div>
 				</div>
 				<!-- alamat -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="pass"><strong>Alamat</strong></label>
+				      <label class="mheight"><strong>Alamat</strong></label>
 				    </div>
 				    <div class="nine columns">
 				     	<textarea class="input textarea" id="address" rows="3" name='alamat' required>{{Input::old("alamat")}}</textarea>
@@ -108,7 +102,7 @@
 				<!-- kode pos -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="pass"><strong>Kode Pos</strong></label>
+				      <label class="mheight"><strong>Kode Pos</strong></label>
 				    </div>
 				    <div class="nine columns">
 				      <input class="text input" id="pass" type="password" name="kodepos" value='{{Input::old("kodepos")}}' />
@@ -117,7 +111,7 @@
 				<!-- telepon -->
 				<div class="field row">
 				    <div class="three columns tright">
-				      <label class="mheight" for="pass"><strong>Telepon</strong></label>
+				      <label class="mheight"><strong>Telepon</strong></label>
 				    </div>
 				    <div class="nine columns">
 				      <input class="text input" id="pass" type="password" name='telp' value='{{Input::old("telp")}}' required />

@@ -634,7 +634,7 @@ html, body { height: 100%; }
 /* Fonts */
 @font-face { font-family: "entypo"; font-style: normal; font-weight: 400; src: url(../fonts/icons/entypo.eot); src: url("../fonts/icons/entypo.eot?#iefix") format("ie9-skip-eot"), url("../fonts/icons/entypo.woff") format("woff"), url("../fonts/icons/entypo.ttf") format("truetype"); }
 /* Typography */
-h1, h2, h3, h4, h5, h6 { font-family: arial, sans-serif; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.273em; line-height: 1.15538em; padding-bottom: 0.273em; }
+h1, h2, h3, h4, h5, h6 { font-family: arial, sans-serif; font-weight: 300; color: #444444; text-rendering: optimizeLegibility; padding-top: 0.273em; line-height: 1.15538em; padding-bottom: 0.5em; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #724606; }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: #c03d20; }
 
@@ -1304,7 +1304,7 @@ img { -ms-interpolation-mode: bicubic; }
 .navbar li .dropdown ul > li .dropdown { display: none; background: white; }
 .navbar li .dropdown ul li:first-child a { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 
-.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a { position: relative; background: #8a5507; z-index: 1000; }
+.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a { position: relative; background: #a26409; z-index: 1000; }
 
 .gumby-no-touch .navbar ul li:hover .dropdown, .gumby-touch .navbar ul li.active .dropdown { min-height: 50px; max-height: 561px; overflow: visible; height: auto; width: 100%; padding: 0; border-top: 1px solid #5a3705; -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
 
@@ -1798,7 +1798,7 @@ section .sidenav a:hover { background: #a26409; }
 .productdetail .price ins { text-decoration: none; }
 
 aside, footer { padding: 1.5em 0; }
-aside form, footer form { text-align: center; background: #f8c478; padding: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+aside form, footer form { text-align: center; background: #F5AF48; padding: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
 aside form p, footer form p { margin-bottom: 0; }
 aside.first, footer.first { background: #FBDFB6; color: #724606; }
 aside.first h3, footer.first h3, aside.first h4, footer.first h4 { color: #5a3705; }

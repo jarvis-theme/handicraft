@@ -20,17 +20,19 @@
 			    <div class="four columns image photo product">
 			      	<!-- product image -->
 			  		<a href="{{product_url($products)}}">
-			  			<img src="{{url(product_image_url($products->gambar1,'medium'))}}" alt="Produk" style="height:214px;width:auto;" />
+			  			<img src="{{url(product_image_url($products->gambar1,'medium'))}}" alt="Produk" />
 			  		</a>
 			      	<!-- product detail -->
 			      	<div class="product-detail">
 						<h4 class="title"><a href="{{product_url($products)}}">{{short_description($products->nama,19)}}</a></h4>
 						@if(is_outstok($products))
 							<span class="empty">Kosong</span>
-                        @elseif(is_terlaris($products))
+                        @else
+	                        @if(is_terlaris($products))
 							<span class="sale">Hot</span>
-                        @elseif(is_produkbaru($products))
+	                        @elseif(is_produkbaru($products))
 							<span class="new">Baru</span>
+							@endif
                         @endif
 						<span class="price">
 							@if(!empty($products->hargaCoret))

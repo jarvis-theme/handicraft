@@ -61,7 +61,7 @@ return array(
     'banner' => true,
     'themesColor' => array(
         'type'=> 'false',
-        'warnaDef'=>'main-color:#e94b45;hover-color:#e4716c;button-color:#ff9692;form-newsletter:#fa8782;button-subscribe:#fa8782;button-viewall:#9dca46',
+        'warnaDef'=>'main-color:#724606;hover-color:#a26409;background-color:#eee;line-color:#FBDFB6;subscribe-area:#F5AF48;footer:#5a3705;button:#f2f2f2',
         'color'=>false
         ),
     'layout' => false,

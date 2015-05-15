@@ -34,4 +34,3 @@
     {{generate_theme_js("handicraft/assets/js/main.js")}}
     {{generate_theme_js("handicraft/assets/js/libs/jquery.fancybox.pack.js")}}
     {{generate_theme_js("handicraft/assets/js/libs/owl.carousel.min.js")}}
-    {{--generate_theme_js("handicraft/assets/js/libs/jquery.flexslider.js")--}}

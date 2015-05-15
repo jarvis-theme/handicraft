@@ -48,7 +48,7 @@
                 <a class="toggle" gumby-trigger="#topmenu > .row > nav > ul" href="#"><i class="icon-menu"></i></a>
                 <nav class="twelve columns">
                     <ul class="nav">
-                    @foreach(category_menu() as $menu)  
+                    @foreach(category_menu(1) as $menu)  
                         @if($menu->parent == '0')   
                         <li>
                             <a href="{{category_url($menu)}}">{{$menu->nama}}</a>

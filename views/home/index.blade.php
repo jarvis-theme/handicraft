@@ -1,7 +1,7 @@
 <section id="popular">
 	<div class="row">
 		<div class="twelve columns">
-			<h2>Koleksi Produk Kami</h2>
+			<h3>Koleksi Produk Kami</h3>
 			<span type="hidden" value="{{$val=0}}"></span>
 			<div class="row">
 				@foreach(home_product() as $products)
@@ -9,11 +9,20 @@
 				<div class="four columns image photo product">
 					<!-- product image -->
 					<a href="{{product_url($products)}}">
-						<img src="{{url(product_image_url($products->gambar1))}}" alt="produk" style="height:290px;width:auto;">
+						<img src="{{url(product_image_url($products->gambar1))}}" alt="produk">
 					</a>
 					<!-- product detail -->
 					<div class="product-detail">
 						<h4 class="title"><a href="{{product_url($products)}}">{{short_description($products->nama,27)}}</a></h4>
+						@if(is_outstok($products))
+						<span class="empty">KOSONG</span>
+						@else
+							@if(is_terlaris($products))
+							<span class="sale">HOT</span>
+							@elseif(is_produkbaru($products))
+							<span class="new">BARU</span>
+							@endif
+						@endif
 						<span class="price">
 							@if(!empty($products->hargaCoret))
 							<del><span class="amount">{{price($products->hargaCoret)}}</span></del>
@@ -41,29 +50,21 @@
 	</div>
 </section>
 
+@if(count(new_product()) > 0)
 <section id="whatsnew">
 	<div class="row">
-		<h2>Produk Terbaru</h2>
+		<h3>Produk Terbaru</h3>
 		<div class="row">
 			@foreach(new_product() as $new_produk)
 			<!-- product section -->
 			<div class="three columns image photo product">
 				<!-- product image -->
 				<a href="{{product_url($new_produk)}}">
-					<img src="{{url(product_image_url($new_produk->gambar1,'medium'))}}" alt="new produk" style="height:210px;width:auto;">
+					<img src="{{url(product_image_url($new_produk->gambar1,'medium'))}}" alt="new produk">
 				</a>
 				<!-- product detail -->
 				<div class="product-detail">
 					<h4 class="title"><a href="{{product_url($new_produk)}}">{{short_description($new_produk->nama, 18)}}</a></h4>
-					@if(is_outstok($new_produk))
-					<span class="sale">KOSONG</span>
-					@else
-						@if(is_terlaris($new_produk))
-						<span class="sale">HOT</span>
-						@else(is_produkbaru($new_produk))
-						<span class="sale">BARU</span>
-						@endif
-					@endif
 					<span class="price">
 						@if(!empty($new_produk->hargaCoret))
 						<del><span class="amount">{{price($new_produk->hargaCoret)}}</span></del>
@@ -79,3 +80,4 @@
 		</div>
 	</div>
 </section>
+@endif

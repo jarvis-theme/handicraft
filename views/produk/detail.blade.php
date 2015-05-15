@@ -124,19 +124,16 @@
 							<!-- product detail -->
 							<div class="product-detail">
 								<h4 class="title"><a href="{{product_url($other)}}">{{short_description($other->nama,15)}}</a></h4>
-								@if(is_outstok($produk))
-                                <span class="empty">KOSONG</span>
-                                @endif
-                                @if(is_terlaris($produk))
-								<span class="sale">HOT</span>
-                                @endif
-                                @if(is_produkbaru($produk))
-                                <span class="new">BARU</span>
-                                @endif
-								<span class="price">
-									@if(!empty($other->hargaCoret))
-									<del><span class="amount">{{price($other->hargaCoret)}}</span></del>&nbsp;
+								@if(is_outstok($other))
+									<span class="empty">Kosong</span>
+			                    @else
+			                        @if(is_terlaris($other))
+									<span class="sale">Hot</span>
+			                        @elseif(is_produkbaru($other))
+									<span class="new">Baru</span>
 									@endif
+			                    @endif
+								<span class="price">
 									<ins><span class="amount">{{price($other->hargaJual)}}</span></ins>
 						  		</span>
 								<div class="medium oval btn primary default">

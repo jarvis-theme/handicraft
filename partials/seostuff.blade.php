@@ -12,15 +12,12 @@
 	<meta name="DC.Description" content="{{$description}}">
 	
 	<!-- Facebook Metadata /-->
-	<meta property="fb:page_id" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:description" content=""/>
-	<meta property="og:title" content=""/>
+	<meta property="og:description" content="{{$description}}"/>
+	<meta property="og:title" content="{{$title}}"/>
 
 	<!-- Google+ Metadata /-->
 	<meta itemprop="name" content="">
-	<meta itemprop="description" content="">
-	<meta itemprop="image" content="">
+	<meta itemprop="description" content="{{$description}}">
 
 	<link rel="canonical" href="{{URL::full()}}">
 	<link rel="handicraft-theme" href="{{dirTemaToko()}}handicraft/">

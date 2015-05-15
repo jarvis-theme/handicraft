@@ -1,3 +1,27 @@
+@if($errors->all())
+<div class="alert alert-error">
+	We encountered the following errors:
+	<br>
+	<ul>
+		@foreach($errors->all() as $message)
+		<li>{{ $message }}</li>
+		@endforeach
+	</ul>
+</div>
+@endif
+
+@if(Session::has('error'))
+<div class="alert alert-error">
+	<p>Password lama anda tidak benar, silakan coba lagi.</p>
+</div>
+@endif
+
+@if(Session::has('success'))
+<div class="success" id='message' style='display:none'>
+	<p>Informasi anda berhasil di update.</p>
+</div>
+@endif
+
 <section>
 	<div class="row">
 		<h3 class="title">Order <span>History</span> </h3>
@@ -5,9 +29,9 @@
 	<div class="row">
 		<div class="three columns sidenav">
 			<ul class="sidenav">
-			<li><a href="{{url('member')}}">Order History</a></li>
-			<li><a href="{{url('member/profile/edit')}}">Edit Profile</a></li>
-		</ul>
+				<li><a href="{{url('member')}}">Order History</a></li>
+				<li><a href="{{url('member/profile/edit')}}">Edit Profile</a></li>
+			</ul>
 		</div>
 		<div class="nine columns section">
 			@if($pengaturan->checkoutType != 2)
