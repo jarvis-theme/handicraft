@@ -1,27 +1,3 @@
-@if($errors->all())
-<div class="alert alert-error">
-	We encountered the following errors:
-	<br>
-	<ul>
-		@foreach($errors->all() as $message)
-		<li>{{ $message }}</li>
-		@endforeach
-	</ul>
-</div>
-@endif
-
-@if(Session::has('error'))
-<div class="alert alert-error">
-	<p>Password lama anda tidak benar, silakan coba lagi.</p>
-</div>
-@endif
-
-@if(Session::has('success'))
-<div class="success" id='message' style='display:none'>
-	<p>Informasi anda berhasil di update.</p>
-</div>
-@endif
-
 <section>
 	<div class="row">
 		<h3 class="title">Order <span>History</span> </h3>
@@ -45,7 +21,7 @@
 							<th>Total Order</th>
 							<th>No. Resi</th>
 							<th>Status</th>
-							<th>Konfirmasi</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -136,7 +112,7 @@
 							@endif
 							@if($pengaturan->checkoutType==1) 
 								@if($item->status <= 1)
-								<a href='{{url('konfirmasiorder/'.$item->id)}}' class="metro rounded btn default"><i class="icon-check"></i></a>
+								<a href='{{url('konfirmasiorder/'.$item->id)}}' class="metro rounded btn default">Detail</a>
 								@endif 
 							@endif
 							</td>

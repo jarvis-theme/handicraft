@@ -9,7 +9,7 @@
 				<div class="four columns image photo product">
 					<!-- product image -->
 					<a href="{{product_url($products)}}">
-						<img src="{{url(product_image_url($products->gambar1))}}" alt="produk">
+						<img src="{{url(product_image_url($products->gambar1,'medium'))}}" alt="produk">
 					</a>
 					<!-- product detail -->
 					<div class="product-detail">

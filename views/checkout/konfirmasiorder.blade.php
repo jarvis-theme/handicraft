@@ -1,9 +1,3 @@
-@if(Session::has('success'))
-<div class="success" id='message' style='display:none'>
-	<p>Terima kasih, konfirmasi anda sudah terkirim.</p>					
-</div>		
-@endif
-
 <section style="margin-bottom:40px">
 	<div class="row">
 		<h2 class="title"><i class="icon-basket"></i> Detail Order</h2>
@@ -130,7 +124,7 @@
 					</li>
 					<li class="field">
 						<label  class="mheight"> Rekening Tujuan:</label>
-						<select name='bank' class="opsi">
+						<select name='bank' class="opsi" required>
 							<option value=''>-- Pilih Bank Tujuan --</option>
 							@foreach ($banktrans as $bank)
 							<option value="{{$bank->id}}">{{$bank->bankdefault->nama}} - {{$bank->noRekening}} - A/n {{$bank->atasNama}}</option>

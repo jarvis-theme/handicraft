@@ -1,31 +1,13 @@
-@if($errors->all())
-<div class="alert alert-error">
-	Kami menemukan error berikut:			
-	<ul>
-		@foreach($errors->all() as $message)
-		<li style="margin-left: 20px;">{{ $message }}</li>
-		@endforeach
-	</ul>
-</div>
-@endif
-
-@if(Session::has('error'))
-	<div class="alert alert-error">
-		<h3>Kami menemukan error berikut:</h3>
-		<p>{{Session::get('error')}}</p>
-	</div>
-@endif
-
 <section>
 	<div class="row">
-		<h3 class="title">Login to Access <span>Amazing Benefits !!!</span> </h3>
+		<h3 class="title">Member Area</h3>
 	</div>
 	<div class="row">
 		<!-- login section -->
 		<div class="six columns aside">
 			<form action="{{url('member')}}" method="post">
 				<div class="title">
-					<h4>Register</h4>
+					<h4>Daftar</h4>
 				</div>
 				<!-- name -->
 				<div class="field row">
@@ -42,7 +24,7 @@
 				      <label class="mheight" for="email"><strong>Email</strong></label>
 				    </div>
 				    <div class="nine columns">
-				      <input class="text input" id="email" type="email" name="email" required />
+				      <input class="text input" id="email" type="email" name="email" value="{{Input::old('email')}}" required />
 				    </div>
 				</div>
 				<!-- password -->
@@ -69,7 +51,7 @@
 				      <label class="mheight" for="country"><strong>Negara</strong></label>
 				    </div>
 				    <div class="nine columns">
-						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old(''),array('required', 'id="negara" data-rel="chosen" class="twelve columns text input"'))}}
+						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old('negara'),array('required', 'id="negara" data-rel="chosen" class="twelve columns text input"'))}}
 				    </div>
 				</div>
 				<!-- provinsi -->
@@ -78,7 +60,7 @@
 				      <label class="mheight"><strong>Provinsi</strong></label>
 				    </div>
 				    <div class="nine columns">
-						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --'), Input::old("provinsi"),array('required', 'id="provinsi" data-rel="chosen" class="twelve columns text input"'))}}
+						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, Input::old("provinsi"),array('required', 'id="provinsi" data-rel="chosen" class="twelve columns text input"'))}}
 				    </div>
 				</div>
 				<!-- kota -->
@@ -87,7 +69,7 @@
 				      <label class="mheight"><strong>Kota</strong></label>
 				    </div>
 				    <div class="nine columns">
-						{{Form::select('kota',array('' => '-- Pilih Kota --'), Input::old("kota"),array('required', 'id="kota" data-rel="chosen" class="twelve columns text input"'))}}
+						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, Input::old("kota"),array('required', 'id="kota" data-rel="chosen" class="twelve columns text input"'))}}
 				    </div>
 				</div>
 				<!-- alamat -->
@@ -105,7 +87,7 @@
 				      <label class="mheight"><strong>Kode Pos</strong></label>
 				    </div>
 				    <div class="nine columns">
-				      <input class="text input" id="pass" type="password" name="kodepos" value='{{Input::old("kodepos")}}' />
+				      <input class="text input" id="pass" type="number" name="kodepos" value='{{Input::old("kodepos")}}' />
 				    </div>
 				</div>	
 				<!-- telepon -->
@@ -114,7 +96,7 @@
 				      <label class="mheight"><strong>Telepon</strong></label>
 				    </div>
 				    <div class="nine columns">
-				      <input class="text input" id="pass" type="password" name='telp' value='{{Input::old("telp")}}' required />
+				      <input class="text input" id="pass" type="number" name='telp' value='{{Input::old("telp")}}' required />
 				    </div>
 				</div>
 				<div class="field row">
@@ -150,10 +132,10 @@
 		<!-- register <section></section> -->
 		<div class="six columns">
 			<div class="title">
-				<h4>Have An Account</h4>
+				<h4>Sudah Menjadi Member?</h4>
 			</div>
 			<p>
-				By login you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+				Silakan menuju halaman login sekarang juga.
 				<div class="medium metro rounded btn primary">
 					<a href="{{url('member')}}">Login</a>
 				</div>
