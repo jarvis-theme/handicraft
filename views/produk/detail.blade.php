@@ -22,7 +22,7 @@
 					<div class="five columns section">
 						<div class="image photo product">
 							<a class="zoom fancybox" href="{{product_image_url($produk->gambar1)}}" title="{{short_description($produk->nama,20)}}">
-					        	<img src="{{url(product_image_url($produk->gambar1))}}" alt="Produk" />
+					        	<img src="{{url(product_image_url($produk->gambar1,'large'))}}" alt="Produk" />
 					        </a>
 						</div>
 						<div id="thumb-view">
@@ -30,28 +30,28 @@
                                 @if($produk->gambar1 != '')
                                 <li class="item">
                                     <a class="zoom fancybox" href="{{product_image_url($produk->gambar1)}}" title="{{$produk->nama}}">
-                                    {{HTML::image(product_image_url($produk->gambar1,'medium'),'gambar1',array('width'=>'130', 'height'=>'auto'))}}
+                                    {{HTML::image(product_image_url($produk->gambar1,'thumb'),'gambar1',array('width'=>'130', 'height'=>'auto'))}}
                                     </a>
                                 </li>
                                 @endif
                                 @if($produk->gambar2 != '')
                                 <li class="item">
                                     <a class="zoom fancybox" href="{{product_image_url($produk->gambar2)}}" title="{{$produk->nama}}">
-                                    {{HTML::image(product_image_url($produk->gambar2,'medium'),'gambar2',array('width'=>'130', 'height'=>'auto'))}}
+                                    {{HTML::image(product_image_url($produk->gambar2,'thumb'),'gambar2',array('width'=>'130', 'height'=>'auto'))}}
                                     </a>
                                 </li>
                                 @endif
                                 @if($produk->gambar3 != '')
                                 <li class="item">
                                     <a class="zoom fancybox" href="{{product_image_url($produk->gambar3)}}" title="{{$produk->nama}}">
-                                    {{HTML::image(product_image_url($produk->gambar3,'medium'),'gambar3',array('width'=>'130', 'height'=>'auto'))}}
+                                    {{HTML::image(product_image_url($produk->gambar3,'thumb'),'gambar3',array('width'=>'130', 'height'=>'auto'))}}
                                     </a>
                                 </li>
                                 @endif
                                 @if($produk->gambar4 != '')
                                 <li class="item">
                                     <a class="zoom fancybox" href="{{product_image_url($produk->gambar4)}}" title="{{$produk->nama}}">
-                                    {{HTML::image(product_image_url($produk->gambar4,'medium'),'gambar4',array('width'=>'130', 'height'=>'auto'))}}
+                                    {{HTML::image(product_image_url($produk->gambar4,'thumb'),'gambar4',array('width'=>'130', 'height'=>'auto'))}}
                                     </a>
                                 </li>
                                 @endif
@@ -76,7 +76,7 @@
 							<div class="picker ">
 								@if($opsiproduk->count() > 0)
 								<select class="form-control">
-							        <option>-- Pilih Opsi --</option>
+							        <option value="">-- Pilih Opsi --</option>
 							        @foreach ($opsiproduk as $key => $opsi)
                                     <option value="{{$opsi->id}}" {{ $opsi->stok==0 ? 'disabled':''}} >
                                         {{$opsi->opsi1.($opsi->opsi2=='' ? '':' / '.$opsi->opsi2).($opsi->opsi3=='' ? '':' / '.$opsi->opsi3)}} {{jadiRupiah($opsi->harga)}}
@@ -119,7 +119,7 @@
 						<div class="three columns image photo product">
 							<!-- product image -->
 							<a href="{{product_url($other)}}">
-							  <img src="{{url(product_image_url($other->gambar1))}}" alt="Produk Lainnya" />
+							  <img src="{{url(product_image_url($other->gambar1,'medium'))}}" alt="{{$other->nama}}" />
 							</a>
 							<!-- product detail -->
 							<div class="product-detail">

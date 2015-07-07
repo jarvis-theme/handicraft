@@ -33,8 +33,7 @@
         {{ Theme::place('content') }}   
 
         {{ Theme::partial('footer') }}  
-        {{ Theme::partial('defaultjs') }}   
-        {{ Theme::asset()->scripts() }}
+        {{ Theme::partial('defaultjs') }}
         {{ Theme::asset()->container('footer')->scripts() }}
         {{ Theme::partial('analytic') }}    
     </body>

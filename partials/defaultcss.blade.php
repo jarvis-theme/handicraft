@@ -1,6 +1,4 @@
 <!-- Default css-->
-favicon()
-{{createFavicon($toko)}}
 @if($tema->isiCss=='')	
 {{generate_theme_css('handicraft/assets/css/style.css')}}
 @else 	
