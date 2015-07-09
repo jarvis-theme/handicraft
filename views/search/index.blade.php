@@ -41,11 +41,12 @@
 			    @endif
 		    @endforeach
 		    </div>
+		    <h4>Pencarian Artikel</h4>
 		    <div class="row">
 		    	@foreach($hasilblog as $blogs)
 			    <div>
+			    <h5><a href="{{blog_url($blogs)}}">{{$blogs->judul}}</a></h5>
 			    {{short_description($blogs->isi,300)}}
-			    12321
 			    </div>
 			    @endforeach
 		    </div>

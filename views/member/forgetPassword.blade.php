@@ -26,12 +26,12 @@
 
         <div class="six columns">
             <div class="title">
-                <h4>New Costumer</h4>
+                <h4>Member Baru</h4>
             </div>
             <p>
-                By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+                Dengan mendaftar sebagai member, kamu bisa berbelanja dengan lebih cepat dan praktis dan juga dapat melihat history dari order yang kamu buat.
                 <div class="medium metro rounded btn primary">
-                    <a href="{{url('member/create')}}">Register</a>
+                    <a href="{{url('register')}}">Daftar</a>
                 </div>
             </p>
         </div>

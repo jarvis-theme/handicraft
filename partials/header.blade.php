@@ -23,22 +23,28 @@
                     </form>
                 </div>
 
-                <div class="four columns" style="padding:20px 0;">
+                <div class="four columns " style="padding:20px 0;">
+                    <div class="metro rounded btn default fright" id="shoppingcartplace">
+                        <a href="{{url('checkout')}}">{{shopping_cart()}}</a>
+                    </div>
+
                     @if(!is_login())
-                    <div class="metro rounded btn default" style="margin-bottom: 5px;">
+                    <div class="metro rounded btn default fright" style="margin:0 5px 5px 0px;">
                         <a href="{{url('member')}}">Login</a>
                     </div>
+
+                    <div class="metro rounded btn default fright" style="margin:0 5px 5px 5px;">
+                        <a href="{{url('register')}}">Daftar</a>
+                    </div>
                     @else
-                    <div class="metro rounded btn default" style="margin-bottom: 5px;">
+                    <div class="metro rounded btn default fright" style="margin:0 5px 5px 5px;">
                         <a href="{{url('logout')}}">Logout</a>
                     </div>
-                    <div class="metro rounded btn default">
+                    <div class="metro rounded btn default fright">
                         <a href="{{url('member')}}">My Account</a>
                     </div>
                     @endif
-                    <div class="metro rounded btn default" id="shoppingcartplace">
-                        <a href="{{url('checkout')}}">{{shopping_cart()}}</a>
-                    </div>
+                    
                 </div>
             </div>
         </header>

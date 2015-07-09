@@ -1716,7 +1716,7 @@ header .columns:nth-child(2) { text-align: right; }
 #topmenu .dropdown a { color: #fff; }
 #topmenu .dropdown a:hover { background-color: #8a5507; }
 
-.unslider-arrow { position: absolute; top: 50%; z-index: 5; background: #F5AF48; color: #fff; -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; opacity: .8; }
+.unslider-arrow { position: absolute; top: 45%; z-index: 5; background: #F5AF48; color: #fff; -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; opacity: .8; }
 .unslider-arrow:hover { opacity: 1; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
 .unslider-arrow:hover > i { color: #fff; }
 .unslider-arrow i { color: #fff; margin: 15px; line-height: 20px; font-size: 3em; vertical-align: middle; }
