@@ -54,18 +54,22 @@
                 <a class="toggle" gumby-trigger="#topmenu > .row > nav > ul" href="#"><i class="icon-menu"></i></a>
                 <nav class="twelve columns">
                     <ul class="nav">
-                    @foreach(category_menu(1) as $menu)  
-                        @if($menu->parent == '0')   
-                        <li>
-                            <a href="{{category_url($menu)}}">{{$menu->nama}}</a>
-                            @foreach(list_category() as $submenu)   
-                                @if($menu->id == $submenu->parent)  
+                    @if(count(category_menu()) > 0)
+                    {{-- */ $counts = 0; /* --}}
+                    @foreach(category_menu() as $menu)  
+                        @if($counts < 5)
+                            @if($menu->parent == '0') 
+                            <li>
+                                <a href="{{category_url($menu)}}">{{$menu->nama}}</a>
+                                @if(count($menu->anak) > 0)
                                 <div class="dropdown">
                                     <ul>
+                                    @foreach($menu->anak as $submenu)   
+                                        @if($submenu->parent == $menu->id)  
                                         <li>
                                             <a href="{{category_url($submenu)}}">{{$submenu->nama}}</a>
-                                            @foreach(list_category() as $submenu2)  
-                                                @if($submenu->id == $submenu2->parent)  
+                                            @foreach($submenu->anak as $submenu2)  
+                                                @if($submenu2->parent == $submenu->id)  
                                                 <div class="dropdown">
                                                     <ul>
                                                         <li>
@@ -76,13 +80,17 @@
                                                 @endif  
                                             @endforeach 
                                         </li>
+                                        @endif  
+                                    @endforeach 
                                     </ul>
                                 </div>
-                                @endif  
-                            @endforeach 
+                                @endif
+                            @endif
+                            {{-- */ $counts+=1; /* --}}
                         </li>
-                        @endif  
+                        @endif
                     @endforeach 
+                    @endif
                     </ul>
                 </nav> 
             </div>

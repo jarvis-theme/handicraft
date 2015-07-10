@@ -73,9 +73,9 @@
 							@elseif($order->status==2)
 								<span class="label label-info">Pembayaran diterima</span>
 							@elseif($order->status==3)
-								<span class="label label-info">Terkirim</span>
+								<span class="label label-success">Terkirim</span>
 							@elseif($order->status==4)
-								<span class="label label-info">Batal</span>
+								<span class="label label-default">Batal</span>
 							@endif
 						@else 
 							@if($order->status==0)
@@ -89,9 +89,9 @@
 							@elseif($order->status==4)
 								<span class="label label-info">Pembayaran lunas</span>
 							@elseif($order->status==5)
-								<span class="label label-info">Terkirim</span>
+								<span class="label label-success">Terkirim</span>
 							@elseif($order->status==6)
-								<span class="label label-info">Batal</span>
+								<span class="label label-default">Batal</span>
 							@elseif($order->status==7)
 								<span class="label label-info">Konfirmasi Pelunasan diterima</span>
 							@endif
@@ -134,12 +134,12 @@
 					<li class="field">
 						<label  class="mheight"> Jumlah:</label>
 						@if($checkouttype==1)        
-						<input type="text" class="text input" id="search" placeholder="jumlah yg terbayar" name='jumlah' value='{{$order->total}}' required>
+						<input type="number" class="text input" id="search" placeholder="jumlah yg terbayar" name='jumlah' value='{{$order->total}}' required>
 						@else
 							@if($order->status < 2)
-					  		<input class="text input" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->dp}}' required>
+					  		<input class="text input" id="search" placeholder="jumlah yg terbayar" type="number" name='jumlah' value='{{$order->dp}}' required>
 							@elseif(($order->status > 1 && $order->status < 4) || $order->status==7)
-							<input class="text input" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->total - $order->dp}}' required>
+							<input class="text input" id="search" placeholder="jumlah yg terbayar" type="number" name='jumlah' value='{{$order->total - $order->dp}}' required>
 							@endif
 						@endif
 					</li>
@@ -147,7 +147,6 @@
 				<div class="medium primary btn">
                     <button type="submit">Konfirmasi Order</button>
                 </div>
-				<!-- <button type="submit" class="medium metro rounded btn primary">Konfirmasi Order</button> -->
 				{{Form::close()}}
 			</div>
 			@endif
