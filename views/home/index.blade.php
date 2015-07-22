@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="twelve columns">
 			<h3>Koleksi Produk Kami</h3>
-			<span type="hidden" value="{{$val=0}}"></span>
+			{{-- */ $val=0; /* --}}
 			<div class="row">
 				@foreach(home_product() as $products)
 				<!-- product section -->
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 				</div>
-				<span type="hidden" value="{{$val+=1}}"></span>
+				{{-- */ $val+=1; /* --}}
 				@if($val % 3 == 0 && $val != 0)
 				</div>
 				<div class="row">

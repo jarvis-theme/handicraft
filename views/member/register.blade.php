@@ -51,7 +51,7 @@
 				      <label class="mheight" for="country"><strong>Negara</strong></label>
 				    </div>
 				    <div class="nine columns">
-						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old('negara'),array('required', 'id="negara" data-rel="chosen" class="twelve columns text input"'))}}
+						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old('negara'),array('required', "id"=>"negara", "data-rel"=>"chosen", "class"=>"twelve columns text input"))}}
 				    </div>
 				</div>
 				<!-- provinsi -->
@@ -60,7 +60,7 @@
 				      <label class="mheight"><strong>Provinsi</strong></label>
 				    </div>
 				    <div class="nine columns">
-						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, Input::old("provinsi"),array('required', 'id="provinsi" data-rel="chosen" class="twelve columns text input"'))}}
+						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, Input::old("provinsi"),array('required', "id"=>"provinsi", "data-rel"=>"chosen", "class"=>"twelve columns text input"))}}
 				    </div>
 				</div>
 				<!-- kota -->
@@ -69,7 +69,7 @@
 				      <label class="mheight"><strong>Kota</strong></label>
 				    </div>
 				    <div class="nine columns">
-						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, Input::old("kota"),array('required', 'id="kota" data-rel="chosen" class="twelve columns text input"'))}}
+						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, Input::old("kota"),array('required', "id"=>"kota", "data-rel"=>"chosen", "class"=>"twelve columns text input"))}}
 				    </div>
 				</div>
 				<!-- alamat -->
@@ -87,7 +87,7 @@
 				      <label class="mheight"><strong>Kode Pos</strong></label>
 				    </div>
 				    <div class="nine columns">
-				      <input class="text input" id="pass" type="number" name="kodepos" value='{{Input::old("kodepos")}}' />
+				      <input class="text input" type="number" name="kodepos" value='{{Input::old("kodepos")}}' />
 				    </div>
 				</div>	
 				<!-- telepon -->
@@ -96,7 +96,7 @@
 				      <label class="mheight"><strong>Telepon</strong></label>
 				    </div>
 				    <div class="nine columns">
-				      <input class="text input" id="pass" type="number" name='telp' value='{{Input::old("telp")}}' required />
+				      <input class="text input" type="number" name='telp' value='{{Input::old("telp")}}' required />
 				    </div>
 				</div>
 				<div class="field row">
@@ -105,7 +105,7 @@
 					</div>
 					<div class="nine columns">
 						{{ HTML::image(Captcha::img(), 'Captcha image') }}
-						{{Form::text('captcha','', array('class'=>'text input'))}}
+						{{Form::text('captcha','', array('class'=>'text input','required'))}}
 					</div>
 				</div>
 				<!-- remember -->

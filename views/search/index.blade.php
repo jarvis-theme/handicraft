@@ -5,7 +5,8 @@
 	<div class="row">
 		<div class="twelve columns section">
         @if($jumlahCari != 0)
-		    <div class="row" value="{{$row = 0}}">
+		    <div class="row">
+		    {{-- */ $row = 0 /* --}}
 			@foreach($hasilpro as $products)
 			    <!-- product section -->
 			    <div class="three columns image photo product">
@@ -32,12 +33,12 @@
 						<div class="medium oval btn primary default">
 							<a href="{{product_url($products)}}">Lihat</a>
 						</div>
-						<input type="hidden" value="{{$row += 1}}">
+						{{-- */ $row += 1 /* --}}
 					</div>
 			    </div>
 			    @if(($row % 4) == 0 && $row != 0)
 			    </div>
-			    <div class="row" value="{{$row}}">
+			    <div class="row">
 			    @endif
 		    @endforeach
 		    </div>
@@ -50,6 +51,14 @@
 			    <div>
 			    <h5><a href="{{blog_url($blogs)}}">{{$blogs->judul}}</a></h5>
 			    {{short_description($blogs->isi,300)}}
+			    </div>
+			    @endforeach
+		    </div>
+		    <div class="row">
+		    	@foreach($hasilhal as $hal)
+			    <div>
+			    	<h5><a href="{{menu_url($hal)}}">{{$hal->judul}}</a></h5>
+			    	{{short_description($hal->isi,300)}}
 			    </div>
 			    @endforeach
 		    </div>

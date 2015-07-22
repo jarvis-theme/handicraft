@@ -57,7 +57,7 @@
                             @endif
                         </li>
                         <li>
-                           <i class="icon-mobile"></i> {{$kontak->bb}} <small>(BBM)</small>
+                           <i class="icon-mobile"></i> {{empty($kontak->bb) ? '-' : $kontak->bb}} <small>(BBM)</small>
                         </li>
                         <li>
                            <i class="icon-mail"></i> {{$kontak->email}}
@@ -78,19 +78,7 @@
                     @foreach($quickLink as $link)
                         @if($group->id == $link->tautanId)
                         <li>
-                            @if($link->halaman=='1')
-                                @if($link->linkTo == 'halaman/about-us')
-                                <a href="{{url(strtolower($link->linkTo))}}">{{$link->nama}}</a>
-                                @else
-                                <a href='{{url("halaman/".strtolower($link->linkTo))}}'>{{$link->nama}}</a>
-                                @endif
-                            @elseif($link->halaman=='2')
-                                <a href='{{url("blog/".strtolower($link->linkTo))}}'>{{$link->nama}}</a>
-                            @elseif($link->url=='1')
-                                <a href="http://{{strtolower($link->linkTo)}}">{{$link->nama}}</a>
-                            @else
-                                <a href='{{url(strtolower($link->linkTo))}}'>{{$link->nama}}</a>
-                            @endif
+                            <a href='{{menu_url($link)}}'>{{$link->nama}}</a>
                         </li>
                         @endif
                     @endforeach
@@ -99,7 +87,12 @@
                 @endforeach
                 <div class="three columns">
                     @foreach(list_banks() as $bank)
-                    {{HTML::image(bank_logo($bank))}}
+                    {{HTML::image(bank_logo($bank), $bank->bankdefault->nama)}}
+                    @endforeach
+                    @foreach(list_payments() as $pay)   
+                        @if($pay->nama == 'ipaymu' && $pay->aktif == 1) 
+                        <img src="{{url('img/bank/ipaymu.jpg')}}" alt="ipaymu" />
+                        @endif
                     @endforeach
                     @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
                     <img src="{{url('img/bank/doku.jpg')}}" alt="Doku Payment">
