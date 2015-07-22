@@ -42,6 +42,9 @@
 		    @endforeach
 		    </div>
 		    <h4>Pencarian Artikel</h4>
+		    @if(count($hasilblog) == 0)
+		    Pencarian artikel tidak ditemukan.
+		    @endif
 		    <div class="row">
 		    	@foreach($hasilblog as $blogs)
 			    <div>
