@@ -1,3 +1,5 @@
+{{favicon()}}
+
 <!-- Default css-->
 @if($tema->isiCss=='')	
 {{generate_theme_css('handicraft/assets/css/style.css')}}

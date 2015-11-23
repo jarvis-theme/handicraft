@@ -4,53 +4,54 @@
                     @if(@getimagesize(url( logo_image_url() )))
                     <div id="logo">
                         <a href="{{url('home')}}">
-                            {{HTML::image(logo_image_url(), 'Logo', array('style'=>'max-width:290px;height:auto;max-height:140px;'))}}
+                            {{HTML::image(logo_image_url(), 'Logo', array('class'=>'logos'))}}
                         </a>
                     </div>
                     @else
-                    <div id="logo" style="margin-top:25px">
-                        <a style="text-decoration:none" href="{{url('home')}}">
-                            {{ short_description(Theme::place('title'),30,array('style'=>'margin-top:10px;')) }}
+                    <div id="logo" class="logos-toptext">
+                        <a class="nodecoration" href="{{url('home')}}">
+                            {{ short_description(Theme::place('title'),20,array('class'=>'logotext')) }}
                         </a>
                     </div>
                     @endif
                 </div>
                 <div class="four columns">
-                    <!-- form pencarian -->
-                    <form action="{{url('search')}}" class="append field" style="padding:20px 0;" method="post" role="search">  
-                        <input class="wide input" type="text" placeholder="Search" name="search" required />
+                    <form action="{{url('search')}}" class="append field inputsearch" method="post" role="search">  
+                        <input class="wide input" type="text" placeholder="" name="search" required />
                         <button class="adjoined icon-left icon-search" type="submit">Cari</button>                 
                     </form>
                 </div>
 
-                <div class="four columns " style="padding:20px 0;">
+                <div class="four columns inputsearch">
                     <div class="metro rounded btn default fright" id="shoppingcartplace">
                         <a href="{{url('checkout')}}">{{shopping_cart()}}</a>
                     </div>
 
                     @if(!is_login())
-                    <div class="metro rounded btn default fright" style="margin:0 5px 5px 0px;">
-                        <a href="{{url('member')}}">Login</a>
-                    </div>
-
-                    <div class="metro rounded btn default fright" style="margin:0 5px 5px 5px;">
-                        <a href="{{url('register')}}">Daftar</a>
+                    <div class="fright accounts">
+                        <div class="metro rounded btn default fright" id="toplogin">
+                            <a href="{{url('member')}}">Login</a>
+                        </div>
+                        <div class="metro rounded btn default fright toprightlogin">
+                            <a href="{{url('register')}}">Daftar</a>
+                        </div>
                     </div>
                     @else
-                    <div class="metro rounded btn default fright" style="margin:0 5px 5px 5px;">
-                        <a href="{{url('logout')}}">Logout</a>
-                    </div>
-                    <div class="metro rounded btn default fright">
-                        <a href="{{url('member')}}">My Account</a>
+                    <div class="fright accounts">
+                        <div class="metro rounded btn default fright toprightlogin">
+                            <a href="{{url('logout')}}">Logout</a>
+                        </div>
+                        <div class="metro rounded btn default fright">
+                            <a href="{{url('member')}}">My Account</a>
+                        </div>
                     </div>
                     @endif
-                    
                 </div>
             </div>
         </header>
         <div class="navbar" id="topmenu">
             <div class="row">
-                <a href="#" class="toggle" style="left:20px">Menu</a>
+                <a href="#" class="toggle leftmenu">Menu</a>
                 <a class="toggle" gumby-trigger="#topmenu > .row > nav > ul" href="#"><i class="icon-menu"></i></a>
                 <nav class="twelve columns">
                     <ul class="nav">

@@ -1,4 +1,4 @@
-<section style="margin-bottom:40px;">
+<section class="sectiondiv">
 	<div class="row">
 		<h3 class="title">{{$data->judul}} </h3>
 	</div>

@@ -14,8 +14,6 @@
         {{ Theme::partial('seostuff') }}    
         {{ Theme::partial('defaultcss') }}  
         {{ Theme::asset()->styles() }}  
-        
-        {{generate_theme_js('handicraft/assets/js/libs/modernizr-2.6.2.min.js')}}
     </head>
 
     <body>
@@ -29,12 +27,9 @@
 
         {{ Theme::partial('header') }}  
         {{ Theme::partial('slider') }}  
-        
         {{ Theme::place('content') }}   
-
         {{ Theme::partial('footer') }}  
         {{ Theme::partial('defaultjs') }}
-        {{ Theme::asset()->container('footer')->scripts() }}
         {{ Theme::partial('analytic') }}    
     </body>
 </html>

@@ -50,13 +50,13 @@ return array(
     ),
     'num_display' => array(
         'home_product'=>6,
-        'main_product'=>8,
+        'main_product'=>9,
         'related_product'=>4,
         'latest_product'=>4,
         'bestseller'=>4,
         'featured'=>4,
         'blog'=>6,
-        'testimonial'=>4,    
+        'testimonial'=>5,    
     ),
     'banner' => true,
     'themesColor' => array(

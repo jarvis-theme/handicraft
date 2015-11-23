@@ -1,24 +1,24 @@
-<section style="margin-bottom:40px">
+<section class="sectiondiv">
     <div class="row">
-        <!-- login section -->
         <div class="six columns aside">
             <form action="{{url('member/forgetpassword')}}" method="post">
                 <div class="title">
-                    <h4>Forget Password</h4>
+                    <h4>Lupa Password</h4>
                 </div>
                 <div class="field row">
                     <div class="three columns tright">
-                      <label class="mheight" for="email"><strong>Email</strong></label>
+                        <label class="mheight" for="email"><strong>Email</strong></label>
                     </div>
                     <div class="nine columns">
-                      <input class="text input" id="email" type="email" name="recoveryEmail" required />
+                        <input class="text input" id="email" type="email" name="recoveryEmail" required="required" />
                     </div>
                 </div>
                 <div class="field row">
-                    <div class="three columns tright">
-                    </div>
+                    <div class="three columns tright"></div>
                     <div class="nine columns">
-                      <div class="medium metro rounded btn primary" type="submit"><button>Reset Password</button></div>
+                        <div class="medium metro rounded btn primary">
+                            <button type="submit">Reset Password</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -29,9 +29,9 @@
                 <h4>Member Baru</h4>
             </div>
             <p>
-                Dengan mendaftar sebagai member, kamu bisa berbelanja dengan lebih cepat dan praktis dan juga dapat melihat history dari order yang kamu buat.
+                Dengan mendaftar sebagai member, kamu bisa berbelanja dengan lebih cepat, praktis dan juga dapat melihat history dari order yang kamu buat.
                 <div class="medium metro rounded btn primary">
-                    <a href="{{url('register')}}">Daftar</a>
+                    <a href="{{url('member/create')}}">Daftar</a>
                 </div>
             </p>
         </div>

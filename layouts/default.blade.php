@@ -14,7 +14,6 @@
         {{ Theme::partial('seostuff') }}    
         {{ Theme::partial('defaultcss') }}  
         {{ Theme::asset()->styles() }}  
-        {{generate_theme_js('handicraft/assets/js/libs/modernizr-2.6.2.min.js')}}
     </head>
 
     <body>
@@ -25,11 +24,9 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        {{ Theme::partial('notification') }}  
-        {{ Theme::partial('header') }}  
         
+        {{ Theme::partial('header') }}  
         {{ Theme::place('content') }}   
-
         {{ Theme::partial('footer') }}  
         {{ Theme::partial('defaultjs') }}
         {{ Theme::partial('analytic') }}    

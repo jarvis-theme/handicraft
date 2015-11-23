@@ -7,8 +7,9 @@
 				@foreach(slideshow() as $slide)
 				<li>
 					<div class="tagline">
-						{{HTML::image(slide_image_url($slide->gambar),'slideshow')}}
-						<!-- <p>{{$slide->text}}</p> -->
+        				<a href="{{$slide->text=='' ? '#' : $slide->text}}">
+							{{HTML::image(slide_image_url($slide->gambar),'slideshow')}}
+						</a>
 					</div>
 				</li>
 				@endforeach
