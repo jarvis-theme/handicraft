@@ -7,7 +7,11 @@
 				@foreach(slideshow() as $slide)
 				<li>
 					<div class="tagline">
-        				<a href="{{$slide->text=='' ? '#' : $slide->text}}">
+						@if($slide->text == '')
+        				<a href="#">
+        				@else
+        				<a href="{{filter_link_url($slide->text)}}" target="_blank">
+        				@endif
 							{{HTML::image(slide_image_url($slide->gambar),'slideshow')}}
 						</a>
 					</div>

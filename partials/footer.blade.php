@@ -13,6 +13,11 @@
                             <i class="icon-twitter" title="Twitter"></i>
                         </a>
                         @endif
+                        @if(!empty($kontak->gp))
+                        <a href="{{url($kontak->gp)}}">
+                            <i class="icon-google-circles" title="Google+"></i>
+                        </a>
+                        @endif
                         @if(!empty($kontak->pt))
                         <a href="{{url($kontak->pt)}}">
                             <i class="icon-pinterest" title="Pinterest"></i>
@@ -21,6 +26,11 @@
                         @if(!empty($kontak->ig))
                         <a href="{{url($kontak->ig)}}">
                             <i class="icon-instagram" title="Instagram"></i>
+                        </a>
+                        @endif
+                        @if(!empty($kontak->tl))
+                        <a href="{{url($kontak->tl)}}">
+                            <i class="icon-tumblr" title="Tumblr"></i>
                         </a>
                         @endif
                     </div>
@@ -94,7 +104,10 @@
                         <img src="{{url('img/bank/ipaymu.jpg')}}" alt="ipaymu" title="Payment" />
                         @endif
                         @if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                        <img src="{{url('img/bitcoin.png')}}" alt="ipaymu" title="Payment" />
+                        <img src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Payment" />
+                        @endif
+                        @if($pay->nama == 'paypal' && $pay->aktif == 1)
+                        <img src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Payment" />
                         @endif
                     @endforeach
                     @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
@@ -111,3 +124,4 @@
                 </div>
             </div>
         </footer>
+        {{pluginPowerup()}}

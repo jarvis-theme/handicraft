@@ -79,7 +79,6 @@ require.config({
     paths: {
         // LIBRARY
         jquery              : '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
-        // jquery              : dirTema+'/assets/js/libs/jquery-1.10.1.min',
         cart                : 'js/shop_cart',
         jq_ui               : 'js/jquery-ui',
         noty                : 'js/jquery.noty',

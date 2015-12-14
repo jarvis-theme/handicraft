@@ -17,7 +17,7 @@
                 </div>
                 <div class="four columns">
                     <form action="{{url('search')}}" class="append field inputsearch" method="post" role="search">  
-                        <input class="wide input" type="text" placeholder="" name="search" required />
+                        <input class="wide input" type="text" placeholder="Cari Produk" name="search" required />
                         <button class="adjoined icon-left icon-search" type="submit">Cari</button>                 
                     </form>
                 </div>
