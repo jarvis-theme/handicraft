@@ -120,7 +120,7 @@
                     <li class="field">
                         <label class="mheight"> Jumlah:</label>
                         @if($checkouttype==1)        
-                        <input type="number" class="text input" id="search" placeholder="jumlah yg terbayar" name="jumlah" value="{{$order->total}}" required="required">
+                        <input type="number" class="text input" id="search" placeholder="Jumlah dana yang ditransfer" name="jumlah" value="{{$order->total}}" required="required">
                         @else
                             @if($order->status < 2)
                             <input class="text input" id="search" placeholder="jumlah yg terbayar" type="number" name="jumlah" value="{{$order->dp}}" required="required">
