@@ -1971,3 +1971,84 @@ footer .btn { float: right; }
 	width: 100%;
 }
 .tagline{text-align: center;}
+.sectiondiv{margin-bottom: 40px}.date-newarticle{font-size: 14px}.underline{text-decoration: underline}
+.blognav{margin: 20px 0;border-top: 1px solid #EEE;border-bottom: 0px none;padding-top: 20px}
+.detailorder{margin-left: 8px}.center{text-align: center}.maplocation{float:right;width:100%}
+#sosmed{margin-bottom: 20px}#searchprd{height:214px;width:auto}#testimo{margin-bottom:10px}
+.logos{max-width:290px;height:auto;max-height:140px}.logos-toptext{margin-top:25px}.nodecoration{text-decoration: none}.logotext{margin-top: 10px}.inputsearch{padding:20px 0}#toplogin{margin:0 5px 5px 0px}.toprightlogin{margin:0 5px 5px 5px}.leftmenu{left:20px}
+.pull-right{float: right}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table-responsive {
+  min-height: .01%;
+}
+center#paypal button[type="submit"] {
+    background: #019CDE;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6 }
+
+
+@media screen and (max-width: 767px) {
+	.table-responsive {
+		width: 100%;
+		margin: 20px 0 15px;
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid #ddd;
+		overflow-x: auto;
+	}
+	.table-responsive > .table {
+		margin-bottom: 0;
+	}
+	.table-responsive > .table > thead > tr > th,
+	.table-responsive > .table > tbody > tr > th,
+	.table-responsive > .table > tfoot > tr > th,
+	.table-responsive > .table > thead > tr > td,
+	.table-responsive > .table > tbody > tr > td,
+	.table-responsive > .table > tfoot > tr > td {
+		white-space: nowrap;
+	}
+	.table-responsive > .table-bordered {
+		border: 0;
+	}
+	.table-responsive > .table-bordered > thead > tr > th:first-child,
+	.table-responsive > .table-bordered > tbody > tr > th:first-child,
+	.table-responsive > .table-bordered > tfoot > tr > th:first-child,
+	.table-responsive > .table-bordered > thead > tr > td:first-child,
+	.table-responsive > .table-bordered > tbody > tr > td:first-child,
+	.table-responsive > .table-bordered > tfoot > tr > td:first-child {
+		border-left: 0;
+	}
+	.table-responsive > .table-bordered > thead > tr > th:last-child,
+	.table-responsive > .table-bordered > tbody > tr > th:last-child,
+	.table-responsive > .table-bordered > tfoot > tr > th:last-child,
+	.table-responsive > .table-bordered > thead > tr > td:last-child,
+	.table-responsive > .table-bordered > tbody > tr > td:last-child,
+	.table-responsive > .table-bordered > tfoot > tr > td:last-child {
+		border-right: 0;
+	}
+	.table-responsive > .table-bordered > tbody > tr:last-child > th,
+	.table-responsive > .table-bordered > tfoot > tr:last-child > th,
+	.table-responsive > .table-bordered > tbody > tr:last-child > td,
+	.table-responsive > .table-bordered > tfoot > tr:last-child > td {
+		border-bottom: 0;
+	}
+}
+@media screen and (max-width: 320px) {
+	.inputsearch .fright{float: none}
+	.accounts{margin-top: 5px}
+}
+@media screen and (min-width: 405px) and (max-width: 767px) {
+	.inputsearch #shoppingcartplace{float: none}
+	.accounts{width: 50%;display: inline-block;float: left !important}
+}
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	.accounts{margin-top: 5px}
+}

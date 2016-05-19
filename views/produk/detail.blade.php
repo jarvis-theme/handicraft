@@ -102,7 +102,7 @@
                             <p>{{$produk->deskripsi}}</p>
                         </div>
                         <div class="tab-content">
-                            <p>{{pluginTrustklik()}}</p>
+                            <p>{{ pluginComment(product_url($produk), @$produk) }}</p>
                         </div>
                     </section>
                 </div>
@@ -132,11 +132,11 @@
                                 </span>
                                 <div class="medium oval btn primary default">
                                     <a href="{{product_url($other)}}">Lihat</a>
-                                </div>            
+                                </div>
                             </div>
                         </div>
                         @endforeach
-                    </div>     
+                    </div>
                 </div>
                 @endif
             </div>

@@ -151,8 +151,9 @@ require([
     // call unslider
     $(function() {
         var unslider = $('#slider').unslider({
-            keys: true,               
-            dots: true, 
+            keys: true,
+            dots: true,
+            delay: 3000
         });
 
         $('.unslider-arrow').click(function(e) {

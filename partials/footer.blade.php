@@ -40,7 +40,7 @@
                     <h4>Newsletter</h4>
                     <form action="{{@$mailing->action}}" method="post" target="_blank">
                         <div class="append field">
-                            <input class="wide email input" type="email" placeholder="Masukkan email anda" {{ @$mailing->action==''?'disabled="disabled"':'' }} />
+                            <input class="wide email input" type="email" placeholder="Masukkan email anda" name="email" {{ @$mailing->action==''?'disabled="disabled"':'' }} />
                             <div class="medium primary btn">
                                 <button type="submit" {{ @$mailing->action==''?'disabled style="cursor:default"':'' }}>Subscribe</button>
                             </div>
@@ -113,6 +113,9 @@
                     @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
                     <img src="{{url('img/bank/doku.jpg')}}" alt="Doku Payment" title="Payment">
                     @endif
+                    @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
+                    <img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
+                    @endif
                 </div>
             </div>
         </aside>
@@ -124,4 +127,4 @@
                 </div>
             </div>
         </footer>
-        {{pluginPowerup()}}
+        {{pluginPowerup()}} 

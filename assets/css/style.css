@@ -1973,7 +1973,7 @@ footer .btn { float: right; }
 
 .sectiondiv{margin-bottom: 40px}.date-newarticle{font-size: 14px}.underline{text-decoration: underline}
 .blognav{margin: 20px 0;border-top: 1px solid #EEE;border-bottom: 0px none;padding-top: 20px}
-.detailorder{margin-left: 8px}.center{text-align: center}.maplocation{float:right;width:100%}
+.detailorder{margin-left: 8px; list-style: initial;}.center{text-align: center}.maplocation{float:right;width:100%}
 #sosmed{margin-bottom: 20px}#searchprd{height:214px;width:auto}#testimo{margin-bottom:10px}
 .logos{max-width:290px;height:auto;max-height:140px}.logos-toptext{margin-top:25px}.nodecoration{text-decoration: none}.logotext{margin-top: 10px}.inputsearch{padding:20px 0}#toplogin{margin:0 5px 5px 0px}.toprightlogin{margin:0 5px 5px 5px}.leftmenu{left:20px}
 .pull-right{float: right}
@@ -1985,6 +1985,34 @@ footer .btn { float: right; }
 .table-responsive {
   min-height: .01%;
 }
+center#paypal button[type="submit"] {
+    background: #019CDE;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6; cursor: pointer; }
+form[name="order"] > input[name="SAVE"] {
+	background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.btn-payment { background: #00aee7; border: none; padding: 10px; border-radius: 5px; color: #fff }
+.btn-payment:hover { cursor: pointer; opacity: 0.7 }
+.pay {
+	background: #eee;
+	margin-left: 0;
+	padding: 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.table-responsive { overflow-x: auto; }
+
+
 @media screen and (max-width: 767px) {
 	.table-responsive {
 		width: 100%;
