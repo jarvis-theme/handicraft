@@ -96,7 +96,7 @@
         </div>
 
         <div class="twelve columns section">
-            @if($order->jenisPembayaran==1)
+            @if($order->jenisPembayaran==1 && $order->status == 0)
             <div class="seven columns respond push_two">
                 @if($checkouttype==1)                         
                 {{-- */ $url = 'konfirmasiorder/' /* --}}
@@ -120,7 +120,7 @@
                             <label class="mheight"> Rekening Tujuan:</label>
                             <select name="bank" class="opsi" required="required">
                                 <option value="">-- Pilih Bank Tujuan --</option>
-                                @foreach (list_banks() as $bank)
+                                @foreach ($banktrans as $bank)
                                 <option value="{{$bank->id}}">{{$bank->bankdefault->nama}} - {{$bank->noRekening}} - A/n {{$bank->atasNama}}</option>
                                 @endforeach
                             </select>

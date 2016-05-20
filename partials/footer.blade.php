@@ -97,7 +97,9 @@
                 @endforeach
                 <div class="three columns">
                     @foreach(list_banks() as $bank)
-                    {{HTML::image(bank_logo($bank), $bank->bankdefault->nama, array('title'=>'Payment'))}}
+                        @if($value->status == 1)
+                        {{HTML::image(bank_logo($bank), $bank->bankdefault->nama, array('title'=>'Payment'))}}
+                        @endif
                     @endforeach
                     @foreach(list_payments() as $pay)   
                         @if($pay->nama == 'ipaymu' && $pay->aktif == 1) 
