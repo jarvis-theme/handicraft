@@ -4,33 +4,38 @@
                     <h4 class="title">{{short_description(Theme::place('title'),23)}}</h4>
                     <div class="social">
                         @if(!empty($kontak->fb))
-                        <a href="{{url($kontak->fb)}}">
+                        <a href="{{url($kontak->fb)}}" target="_blank">
                             <i class="icon-facebook" title="Facebook"></i>
                         </a>
                         @endif
                         @if(!empty($kontak->tw))
-                        <a href="{{url($kontak->tw)}}">
+                        <a href="{{url($kontak->tw)}}" target="_blank">
                             <i class="icon-twitter" title="Twitter"></i>
                         </a>
                         @endif
                         @if(!empty($kontak->gp))
-                        <a href="{{url($kontak->gp)}}">
+                        <a href="{{url($kontak->gp)}}" target="_blank">
                             <i class="icon-google-circles" title="Google+"></i>
                         </a>
                         @endif
                         @if(!empty($kontak->pt))
-                        <a href="{{url($kontak->pt)}}">
+                        <a href="{{url($kontak->pt)}}" target="_blank">
                             <i class="icon-pinterest" title="Pinterest"></i>
                         </a>
                         @endif
                         @if(!empty($kontak->ig))
-                        <a href="{{url($kontak->ig)}}">
+                        <a href="{{url($kontak->ig)}}" target="_blank">
                             <i class="icon-instagram" title="Instagram"></i>
                         </a>
                         @endif
                         @if(!empty($kontak->tl))
-                        <a href="{{url($kontak->tl)}}">
+                        <a href="{{url($kontak->tl)}}" target="_blank">
                             <i class="icon-tumblr" title="Tumblr"></i>
+                        </a>
+                        @endif
+                        @if(!empty($kontak->picmix))
+                        <a href="{{url($kontak->picmix)}}" target="_blank">
+                            <img src="https://s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/blogs/event/icon-picmix.png" style="height: 35px; margin-bottom: -7px;">
                         </a>
                         @endif
                     </div>
@@ -97,23 +102,23 @@
                 @endforeach
                 <div class="three columns">
                     @foreach(list_banks() as $bank)
-                        @if($value->status == 1)
-                        {{HTML::image(bank_logo($bank), $bank->bankdefault->nama, array('title'=>'Payment'))}}
+                        @if($bank->status == 1)
+                        {{HTML::image(bank_logo($bank), $bank->bankdefault->nama, array('title'=>$bank->bankdefault->nama, 'style'=>'border-radius: 5px'))}}
                         @endif
                     @endforeach
                     @foreach(list_payments() as $pay)   
                         @if($pay->nama == 'ipaymu' && $pay->aktif == 1) 
-                        <img src="{{url('img/bank/ipaymu.jpg')}}" alt="ipaymu" title="Payment" />
+                        <img src="{{url('img/bank/ipaymu.jpg')}}" alt="ipaymu" title="Ipaymu" />
                         @endif
                         @if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                        <img src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Payment" />
+                        <img src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Bitcoin" />
                         @endif
                         @if($pay->nama == 'paypal' && $pay->aktif == 1)
-                        <img src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Payment" />
+                        <img src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Paypal" />
                         @endif
                     @endforeach
                     @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
-                    <img src="{{url('img/bank/doku.jpg')}}" alt="Doku Payment" title="Payment">
+                    <img src="{{url('img/bank/doku.jpg')}}" alt="Doku Payment" title="DOKU MyShortCart">
                     @endif
                     @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
                     <img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
