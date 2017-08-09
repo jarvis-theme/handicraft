@@ -5,9 +5,9 @@
 	<div class="row">
 		<div class="panel">
 			<div class="header">
-				<a href="#" class="toggle" gumby-trigger="#q1">Kebijakan Layanan</a>
+				<a href="#" class="toggle active" gumby-trigger="#q1">Kebijakan Layanan</a>
 			</div>
-			<div class="drawer" id="q1">
+			<div class="drawer active" id="q1">
 				<p>{{$service->tos}}</p>
 			</div>
 		</div>

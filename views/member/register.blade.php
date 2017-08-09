@@ -4,7 +4,7 @@
     </div>
     <div class="row">
         <div class="six columns aside">
-            <form action="{{url('member')}}" method="post">
+            <form action="{{url('member')}}" method="post" class="register">
                 <div class="field row">
                     <div class="three columns tright">
                       <label class="mheight" for="nama"><strong>Nama</strong></label>
@@ -42,7 +42,15 @@
                       <label class="mheight" for="country"><strong>Negara</strong></label>
                     </div>
                     <div class="nine columns">
-                        {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old('negara'),array('required', "id"=>"negara", "data-rel"=>"chosen", "class"=>"twelve columns text input"))}}
+                        <select class="twelve columns text input" id="negara" name="negara" data-rel="chosen" required>
+                            <option selected>-- Pilih Negara --</option>
+                            @foreach ($negara as $key=>$item)
+                                @if(strtolower($item)=='indonesia')
+                                <option value="1" {{Input::old('negara')==1 ? 'selected' : ''}}>{{$item}}</option>
+                                @endif
+                            @endforeach
+                        </select>
+                        {{--Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old('negara'),array('required', "id"=>"negara", "data-rel"=>"chosen", "class"=>"twelve columns text input"))--}}
                     </div>
                 </div>
                 <div class="field row">

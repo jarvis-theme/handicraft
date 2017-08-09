@@ -7,7 +7,7 @@
         @if(count(list_blog(null,@$blog_category)) > 0)
             @foreach(list_blog(null,@$blog_category) as $blogs)
             <div class="row">
-                <article class="twelve columns">
+                <article class="twelve columns blogs">
                     <h3><a href="{{blog_url($blogs)}}">{{$blogs->judul}}</a></h3>
                     <div class="meta">
                         <i class="icon-calendar"></i> {{date("d F Y", strtotime($blogs->updated_at))}} <i class="icon-folder"></i>

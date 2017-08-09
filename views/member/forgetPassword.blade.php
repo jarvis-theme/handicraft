@@ -15,7 +15,7 @@
                 </div>
                 <div class="field row">
                     <div class="three columns tright"></div>
-                    <div class="nine columns">
+                    <div class="nine columns mob-center">
                         <div class="medium metro rounded btn primary">
                             <button type="submit">Reset Password</button>
                         </div>

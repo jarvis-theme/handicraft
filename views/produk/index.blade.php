@@ -3,12 +3,37 @@
         <h3 class="title">Produk Kami</h3>
     </div>
     <div class="row">
-        <div class="three columns sidenav">
+        <div class="three columns">
             <ul class="sidenav">
                 @foreach(main_menu()->link as $menus)
                 <li><a href="{{menu_url($menus)}}">{{$menus->nama}}</a></li>
                 @endforeach
             </ul>
+            <div class="side-title">
+                    <h5>Produk Terlaris</h5>
+                </div>
+                @if(best_seller()->count() > 0)
+                <div class="aside">
+                    @foreach(best_seller() as $best)
+                    <div class="side-thumb">
+                        <a href="{{product_url($best)}}">
+                            <div class="img-block">
+                                {{HTML::image(product_image_url($best->gambar1,'thumb'),$best->nama)}}
+                            </div>
+                            <p>{{short_description($best->nama, 25)}}</p>
+                            <p>{{price($best->hargaJual)}}</p> 
+                        </a>
+                    </div>
+                    @endforeach
+                </div>
+                @endif
+                @foreach(vertical_banner() as $banners)
+                <div class="center">
+                    <a href="{{url($banners->url)}}">
+                        {{HTML::image(banner_image_url($banners->gambar),'Info Promo',array('class'=>'img-responsive'))}} 
+                    </a>
+                </div>
+                @endforeach
         </div>
         <div class="nine columns section">
             <ul class="breadcrumbs">

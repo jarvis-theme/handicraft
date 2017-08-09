@@ -137,7 +137,7 @@
                 @else
                     <tr><td colspan="2">Inquiry anda masih kosong</td></tr>
                 @endif
-                </table>                
+                </table>
             @endif
         </div>
     </div>

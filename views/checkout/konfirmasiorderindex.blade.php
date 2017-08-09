@@ -13,9 +13,9 @@
                 </div>
                 <div class="field row">
                     <div class="three columns tright"></div>
-                    <div class="nine columns">
-                        <div class="medium metro rounded btn primary" type="submit">
-                            <button>Cari Kode</button>
+                    <div class="nine columns mob-center">
+                        <div class="medium metro rounded btn primary">
+                            <button type="submit">Cari Kode</button>
                         </div>
                     </div>
                 </div>

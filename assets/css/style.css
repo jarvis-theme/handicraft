@@ -1698,7 +1698,7 @@ body { font-family: arial, sans-serif !important; }
 .mheight { margin-bottom: 0; line-height: 35px; }
 
 header { /*padding: 2.5em 0;*/ padding: 10px; }
-header #logo { font-size: 26px; font-size: 1.625rem; }
+header #logo { font-size: 26px; font-size: 1.625rem; line-height: 80px; }
 header #logo a { font-family: serif; vertical-align: middle; font-size: 45px; font-size: 2.8125rem; color: #724606; }
 header #logo a span { color: #d3820b; }
 header input { font-size: 14px !important; }
@@ -1975,7 +1975,7 @@ footer .btn { float: right; }
 .blognav{margin: 20px 0;border-top: 1px solid #EEE;border-bottom: 0px none;padding-top: 20px}
 .detailorder{margin-left: 8px; list-style: initial;}.center{text-align: center}.maplocation{float:right;width:100%}
 #sosmed{margin-bottom: 20px}#searchprd{height:214px;width:auto}#testimo{margin-bottom:10px}
-.logos{max-width:290px;height:auto;max-height:140px}.logos-toptext{margin-top:25px}.nodecoration{text-decoration: none}.logotext{margin-top: 10px}.inputsearch{padding:20px 0}#toplogin{margin:0 5px 5px 0px}.toprightlogin{margin:0 5px 5px 5px}.leftmenu{left:20px}
+.logos{max-width:200px;height:auto;max-height:140px}.logos-toptext{margin-top:25px}.nodecoration{text-decoration: none}.logotext{margin-top: 10px}.inputsearch{padding:20px 0}#toplogin{margin:0 5px 5px 0px}.toprightlogin{margin:0 5px 5px 5px}.leftmenu{left:20px}
 .pull-right{float: right}
 .table {
   width: 100%;
@@ -2011,7 +2011,28 @@ form[name="order"] > input[name="SAVE"]:hover {
 	border-radius: 5px;
 }
 .table-responsive { overflow-x: auto; }
-
+.btn button { padding: 0 18px !important; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mt30 { margin-top: 30px; }
+.picmix { height: 35px; margin-bottom: -7px; }
+.midtrans {
+	padding: 7px;
+	background: #f6f6f6;
+	border-radius: 5px;
+}
+#addorder .append div.btn { top: 1px; }
+.side-thumb { margin-bottom: 20px; clear: both; min-height: 75px; }
+.side-thumb:hover { opacity: 0.8; }
+.side-thumb p { font-size: 14px; margin: 0; }
+.img-block { float: left; margin-right: 20px; }
+.img-block img { max-width: 75px; }
+.side-title {
+	background: #F5AF48;
+	color: #fff;
+	padding: 16px 20px;
+}
+.side-title h5 { color: #724606; }
 
 @media screen and (max-width: 767px) {
 	.table-responsive {
@@ -2058,6 +2079,13 @@ form[name="order"] > input[name="SAVE"]:hover {
 	.table-responsive > .table-bordered > tfoot > tr:last-child > td {
 		border-bottom: 0;
 	}
+	.mob-center { text-align: center; }
+	article.blogs p { font-size: 14px; }
+	article.blogs div.btn { font-size: 12px; }
+	.register select { width: 100% !important; }
+	.forms .field .input { padding: 0 10px !important; width: 100% !important }
+	aside.last .columns { width: 100% !important; text-align: center; }
+	aside.last .columns ul { text-align: center; }
 }
 @media screen and (max-width: 320px) {
 	.inputsearch .fright{float: none}
@@ -2069,4 +2097,8 @@ form[name="order"] > input[name="SAVE"]:hover {
 }
 @media screen and (min-width: 768px) and (max-width: 979px) {
 	.accounts{margin-top: 5px}
+	.img-block { float: none; }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	#addorder input[name="qty"] { width: 60%; }
 }

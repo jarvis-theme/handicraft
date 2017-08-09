@@ -10,44 +10,44 @@
             </ul>
         </div>
         <div class="nine columns section">
-            {{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal'))}}
+            {{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal forms'))}}
                 <div class="field row">
                     <label class="mheight" for="nama"><strong>Nama</strong></label>
-                    <input class="five columns text input" id="inputName" type="text" value="{{$user->nama}}" name="nama" placeholder="Nama" required />
-                </div>            
+                    <input class="six columns text input" id="inputName" type="text" value="{{$user->nama}}" name="nama" placeholder="Nama" required />
+                </div>
                 <div class="field row">
                     <label class="mheight" for="email"><strong>Email</strong></label>
-                    <input type="email" class="five columns text input" name="email" value="{{$user->email}}" id="inputEmail1" placeholder="Email" required>
+                    <input type="email" class="six columns text input" name="email" value="{{$user->email}}" id="inputEmail1" placeholder="Email" required>
                 </div>
                 <div class="field row">
                     <label class="mheight"><strong>Telepon</strong></label>
-                    <input type="text" class="five columns text input" id="inputPhone" name="telp" value="{{$user->telp}}" placeholder="Telepon" required>
+                    <input type="text" class="six columns text input" id="inputPhone" name="telp" value="{{$user->telp}}" placeholder="Telepon" required>
                 </div>
                 <div class="field row">
                     <label class="mheight" for="country"><strong>Negara</strong></label>
                     <div>
-                        {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara , ($user ? $user->negara :(Input::old("negara")? Input::old("negara") :"")), array('required'=>'', 'id'=>'negara', 'class'=>'five columns text input'))}}
+                        {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara , ($user ? $user->negara :(Input::old("negara")? Input::old("negara") :"")), array('required'=>'', 'id'=>'negara', 'class'=>'six columns text input'))}}
                     </div>
-                </div>      
+                </div>
                 <div class="field row">
                     <label class="mheight"><strong>Provinsi</strong></label>
                     <div>
-                        {{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi , ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi', 'class'=>'five columns text input'))}}
+                        {{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi , ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi', 'class'=>'six columns text input'))}}
                     </div>
-                </div>      
+                </div>
                 <div class="field row">
                     <label class="mheight"><strong>Kota</strong></label>
                     <div>
-                        {{Form::select('kota',array('' => '-- Pilih Kota --') + $kota , ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota', 'class'=>'five columns text input'))}}
+                        {{Form::select('kota',array('' => '-- Pilih Kota --') + $kota , ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota', 'class'=>'six columns text input'))}}
                     </div>
-                </div>              
+                </div>
                 <div class="field row">
                     <label class="mheight"><strong>Alamat</strong></label>
-                    <textarea class="five columns input textarea" rows="3" placeholder="Address" name="alamat" required>{{$user->alamat}}</textarea>
+                    <textarea class="six columns input textarea" rows="3" placeholder="Address" name="alamat" required>{{$user->alamat}}</textarea>
                 </div>
                 <div class="field row">
                     <label class="mheight"><strong>Kode Pos</strong></label>
-                    <input type="text" class="three columns text input" id="inputZip" placeholder="Kode Pos" name="kodepos" value="{{$user->kodepos}}" required>
+                    <input type="text" class="six columns text input" id="inputZip" placeholder="Kode Pos" name="kodepos" value="{{$user->kodepos}}" required>
                 </div>
                 <hr>
                 <div class="field row">

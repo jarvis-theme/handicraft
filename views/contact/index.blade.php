@@ -1,6 +1,6 @@
 <section class="sectiondiv">
     <div class="row">
-        <h3 class="title"><i class="icon-mail"></i> Hubungi <span>Kami</span></h3>
+        <h3 class="title"><i class="icon-mail"></i> Hubungi Kami</h3>
     </div>
     <div class="row">
         <div class="row section">
@@ -33,7 +33,7 @@
                     </form>     
                 </div>
             </div>
-            <div class="six columns">
+            <div class="six columns mt20">
                 <div class="title"><h4>Alamat</h4></div>
                 <div class="address">
                     <address>
